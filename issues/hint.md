@@ -42,7 +42,11 @@ for a total of 412 unique source reports.
 - `build/kb/incidents/4471-reassessment/index.html` and `evidence/4471-reassessment.png`
 - `evidence/report-assignments.json` lists the counted report IDs.
 
-This is a course investigation ticket. The course accepted its cause and report count.
-Its closure records completed investigation and kb handoff, as the course requests;
-production remediation and verification remain separate engineering work. Split and
-transfer reports once, preserving IDs; a “known” parent status does not establish a fix.
+## Engineering outcome
+
+After our first submission, the course's engineering update reported #4471 closed on
+5 October: **hint WON'T FIX — booking-v3 form retired**.
+Source: https://hq.mega.dev/challenges/what-it-shows#engineering-update (checked 28 October 2026).
+Close this ticket as **not planned**, not completed: the form was retired, and no hint
+fix was reported. The 33 reports remain historical evidence of the real problem.
+The course accepted this cause and count; the signed kb records the later desk update.

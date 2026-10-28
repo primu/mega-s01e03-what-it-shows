@@ -24,6 +24,11 @@ The accepted decision 0001 is preserved as history. Decision 0002 replaces it in
 updated triage page and addresses new reports across all products the desk supports.
 These changes apply to the course kb export; they do not claim a production deployment.
 
+After the first submission, the course added an engineering update: #4471 closed on
+5 October, parser fixed (`fix(dates): parse dd/mm for eu locales`), hint won't fix
+because booking-v3 was retired. The kb now records that update. Issue #1 closes as
+completed; issue #2 closes as not planned. We did not independently test production.
+
 ## View the rendered kb
 
 The complete static build, including its CSS and JavaScript, is committed under `build/`.

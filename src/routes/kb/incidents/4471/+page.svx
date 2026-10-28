@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · separate parser and booking-form hint problems'
 owner: support desk
-status: split
+status: closed
 reviewed: 2026-10-28
 signature: 'primu / Codex / S01E03'
 ---
@@ -11,6 +11,7 @@ signature: 'primu / Codex / S01E03'
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import EngineeringUpdate from '#lib/kb/EngineeringUpdate.svelte';
   const issues = {
     parser: 'https://github.com/primu/mega-s01e03-what-it-shows/issues/1',
     hint: 'https://github.com/primu/mega-s01e03-what-it-shows/issues/2'
@@ -21,6 +22,8 @@ The original “known, one issue, one fix queued” summary was wrong. The suppl
 classifier separates the shared month-first parser from the booking-v3 hint mismatch.
 They have [separate course tickets](https://github.com/primu/mega-s01e03-what-it-shows/issues).
 This kb records an investigation of the 4 October export; it does not verify production fixes.
+
+<EngineeringUpdate />
 
 <CauseTable ticket={4471} {issues} />
 
@@ -35,7 +38,7 @@ batch triage. Do not infer onset or a release regression from the merge spike.
 
 Follow [current triage](/kb/triage/dedupe/) and [decision 0002](/kb/decisions/0002-dedupe-by-cause/)
 for new reports. Read before merging, keep IDs and event dates, and route uncertain cases to
-investigation. Refresh the counts from the next export. Production resolution requires
-separate verification of both paths.
+investigation. Refresh the counts from the next export. For this incident, record the desk's
+different closure outcomes: parser completed, hint not planned because its form was retired.
 
 <RenderStamp {signature} />

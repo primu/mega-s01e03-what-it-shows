@@ -3,32 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../_app/immutable/entry/start.CKNAMI9S.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/_IHwHI_u.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/D8A5klIy.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/Tqy4QCnQ.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.DCodutlj.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/CQjJmfsZ.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/O2CXQ8YQ.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/BlffaAPJ.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/B84HRWzS.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/0.Bsynries.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/Do9uDwj-.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/6.DDO1uWYr.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/BcTyoJI_.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/CpccvRSw.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/ohMUYltW.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/DLRlknDV.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/ChX6Sn9P.js" rel="modulepreload">
+    <link href="../../../_app/immutable/entry/start.C-m7yQx_.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/DBqmODVL.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CfXrNnSE.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/x-khAroM.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.D2ICT87b.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/BQYbuw-X.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/DW0ad_ZA.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/8CHXB8a_.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CPDRQ5Ex.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/0.CRgBskeC.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/D8ar9Qny.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/6.Dk0zC57Z.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/BjFfMN5b.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/DQhUVhMy.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/YJrpiGKf.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CIIncUwV.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/Ctvz01ZK.js" rel="modulepreload">
 		<!--e2jw2j--><!----><title>#4471 reassessment: separate causes, count once · support kb</title>
 		<link href="../../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/RenderStamp.CMZ6TBbc.css" rel="stylesheet">
-		<link href="../../../_app/immutable/assets/QueueTimeline.hI2H_0Om.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/EngineeringUpdate.XSCRTbd5.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/DedupeExplorer.C3mwiGDj.css" rel="stylesheet">
   </head>
   <body data-sveltekit-preload-data="hover"><div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 reassessment: separate causes, count once</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status reviewed svelte-e2jw2j">reviewed</span> <span class="svelte-e2jw2j">reviewed 2026-10-28 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p>The desk’s original “one issue, one fix” conclusion does not match its own computed views.
 This review uses the supplied support export dated 4 October 2026, not a live ticket-system query.
-The review date records when we read the export; it does not make the exported reports current.</p> <p>The export has <strong>427 rows</strong> but <strong>412 unique report IDs</strong>:
+The review date records when we read the export; it does not make the exported reports current.</p> <aside class="update svelte-pp1xkb"><h2>Engineering update: #4471 closed 5 October</h2> <p>The course's support desk published this update after the first submission:</p> <ul><li><strong>Parser: fixed.</strong> <code>fix(dates): parse dd/mm for eu locales</code>. Close the parser ticket as completed.</li> <li><strong>Hint: won't fix.</strong> The booking-v3 form was retired. Close the hint ticket as not planned, preserving the historical reports.</li></ul> <p>Source: <a href="https://hq.mega.dev/challenges/what-it-shows#engineering-update">course engineering update</a>,
+    checked 28 October 2026. These are the desk's reported outcomes; we did not independently
+    reproduce production behavior. The export counts below remain the pre-closure snapshot.</p></aside><!----> <p>The export has <strong>427 rows</strong> but <strong>412 unique report IDs</strong>:
   15 overlapping rows must not be counted again. All 412
   unique reports are filed under #4471. The supplied tenant-based logic assigns them to <strong>2 causes</strong>; 38 intake tags disagree with those assignments.</p> <h2>Two problems need separate engineering tickets</h2> <!--[--><section><h3>Parser assumes month first</h3> <p><strong>379 reports</strong>, across 11 tenants;
       received 2026-04-01 through 2026-10-04 in this export. <!--[0-->The shared parser reads month first even when the tenant writes day first.
@@ -52,20 +54,21 @@ mechanisms above, with an explicit investigation queue when the evidence is insu
 Keep unique report IDs and received/merged times with each ticket; transfer each report once
 when splitting #4471. Track the unresolved timing reports as follow-up evidence rather than
 silently subtracting them from the current classifier totals. The updated triage page uses
-the new decision; refresh counts from the next export and have the desk owner review incoming exceptions. Engineering
-must verify each fix separately before support marks the corresponding problem resolved.</p> <h2>Evidence and limits</h2> <ul><li>Reports: <code>src/lib/data/reports-4471.json</code>; last occurrence of an ID wins, as in <code>uniqueById</code>.</li> <li>Tenant configuration: <code>src/lib/data/tenants/*.json</code>; no manual list of day-first locales.</li> <li>Classifier and notes: <code>causes.ts</code>, <code>locales.ts</code>, <code>desk-notes.json</code>.</li> <li>Rendered evidence: <code>CauseTable</code>, <code>QueueTimeline</code>, <code>DedupeExplorer</code> and this page’s computed review.</li> <li>We ran the supplied classification and rendered the kb. We have not run the production booking system or verified a production fix.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-D8DM-JSE9</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+the new decision; refresh counts from the next export and have the desk owner review incoming exceptions.
+The subsequent engineering update records different outcomes: parser fixed, hint won’t fix after
+the form’s retirement. Preserve that difference in the ticket closure reasons.</p> <h2>Evidence and limits</h2> <ul><li>Reports: <code>src/lib/data/reports-4471.json</code>; last occurrence of an ID wins, as in <code>uniqueById</code>.</li> <li>Tenant configuration: <code>src/lib/data/tenants/*.json</code>; no manual list of day-first locales.</li> <li>Classifier and notes: <code>causes.ts</code>, <code>locales.ts</code>, <code>desk-notes.json</code>.</li> <li>Rendered evidence: <code>CauseTable</code>, <code>QueueTimeline</code>, <code>DedupeExplorer</code> and this page’s computed review.</li> <li>We ran the supplied classification and rendered the kb. We have not run the production booking system or verified a production fix.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-D8DM-JSE9</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_7gxxq1 = {
+					__sveltekit_1smbgok = {
 						base: new URL("../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.CKNAMI9S.js"),
-						import("../../../_app/immutable/entry/app.DCodutlj.js")
+						import("../../../_app/immutable/entry/start.C-m7yQx_.js"),
+						import("../../../_app/immutable/entry/app.D2ICT87b.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],

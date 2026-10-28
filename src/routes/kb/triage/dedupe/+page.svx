@@ -40,7 +40,7 @@ products. A matching subject with an unknown tenant is not enough to merge.
 The [#4471 reassessment](/kb/incidents/4471-reassessment/) shows why the old rule failed.
 Accepted [decision 0001](/kb/decisions/0001-dedupe-by-subject/) is retained unchanged as history;
 its June 2024 review date does not make it current. Follow decision 0002 for incoming reports
-while engineering investigates the separately tracked fixes. Review this guidance at the
+while the desk tracks separate causes and their outcomes. Review this guidance at the
 shared layout's configured interval and when evidence changes.
 
 <RenderStamp {signature} />

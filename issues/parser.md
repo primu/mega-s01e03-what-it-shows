@@ -43,7 +43,11 @@ timestamps, timezone and rendered output. Do not assert a third confirmed cause 
 - `build/kb/incidents/4471-reassessment/index.html` and `evidence/4471-reassessment.png`
 - `evidence/report-assignments.json` lists every ID counted under each cause.
 
-This is a course investigation ticket. The course accepted its cause and report count.
-Its closure records completed investigation and kb handoff, as the course requests;
-production remediation and verification remain separate engineering work. New reports
-require rereading and refreshed counts; this export is a snapshot.
+## Engineering outcome
+
+After our first submission, the course's engineering update reported #4471 closed on
+5 October: **parser FIXED — `fix(dates): parse dd/mm for eu locales`**.
+Source: https://hq.mega.dev/challenges/what-it-shows#engineering-update (checked 28 October 2026).
+Close this ticket as **completed** based on that reported fix. We did not independently
+reproduce production behavior. The 379 reports remain the historical export count.
+The course accepted this cause and count; the signed kb records the later desk update.

@@ -13,6 +13,7 @@ signature: 'primu / Codex / S01E03'
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import EngineeringUpdate from '#lib/kb/EngineeringUpdate.svelte';
   const issues = {
     parser: 'https://github.com/primu/mega-s01e03-what-it-shows/issues/1',
     hint: 'https://github.com/primu/mega-s01e03-what-it-shows/issues/2'
@@ -22,6 +23,8 @@ signature: 'primu / Codex / S01E03'
 The desk's original “one issue, one fix” conclusion does not match its own computed views.
 This review uses the supplied support export dated 4 October 2026, not a live ticket-system query.
 The review date records when we read the export; it does not make the exported reports current.
+
+<EngineeringUpdate />
 
 <IncidentReview />
 
@@ -61,8 +64,9 @@ mechanisms above, with an explicit investigation queue when the evidence is insu
 Keep unique report IDs and received/merged times with each ticket; transfer each report once
 when splitting #4471. Track the unresolved timing reports as follow-up evidence rather than
 silently subtracting them from the current classifier totals. The updated triage page uses
-the new decision; refresh counts from the next export and have the desk owner review incoming exceptions. Engineering
-must verify each fix separately before support marks the corresponding problem resolved.
+the new decision; refresh counts from the next export and have the desk owner review incoming exceptions.
+The subsequent engineering update records different outcomes: parser fixed, hint won't fix after
+the form's retirement. Preserve that difference in the ticket closure reasons.
 
 ## Evidence and limits
 
