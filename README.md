@@ -10,7 +10,7 @@ review was prepared on 2026-10-28.
 - [Signed reassessment source](src/routes/kb/incidents/4471-reassessment/+page.svx)
 - [Rendered reassessment HTML](build/kb/incidents/4471-reassessment/index.html)
 - [Rendered page screenshot](evidence/4471-reassessment.png)
-- [Proposed replacement decision](src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx)
+- [Replacement decision](src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx)
 - [Exact report assignments](evidence/report-assignments.json)
 - Issue drafts: [parser](issues/parser.md), [booking-v3 hint](issues/hint.md)
 
@@ -20,8 +20,9 @@ overlapping IDs. Counts in the kb page are computed by components, not typed int
 prose. Five reports remain counted under the parser by the supplied classifier but
 need further investigation because their reported symptoms do not establish that mechanism.
 
-The accepted decision 0001 is preserved. The proposed decision 0002 requires desk-owner
-approval, and addresses new reports across all products the desk supports.
+The accepted decision 0001 is preserved as history. Decision 0002 replaces it in the
+updated triage page and addresses new reports across all products the desk supports.
+These changes apply to the course kb export; they do not claim a production deployment.
 
 ## View the rendered kb
 

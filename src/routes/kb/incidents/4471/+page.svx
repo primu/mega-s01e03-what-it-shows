@@ -1,40 +1,41 @@
 ---
 layout: runbook
-title: '#4471 · dates parse mm/dd in eu locales'
+title: '#4471 · separate parser and booking-form hint problems'
 owner: support desk
-status: known
-reviewed: 2026-09-30
+status: split
+reviewed: 2026-10-28
+signature: 'primu / Codex / S01E03'
 ---
 
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
-  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  const issues = {
+    parser: 'https://github.com/primu/mega-s01e03-what-it-shows/issues/1',
+    hint: 'https://github.com/primu/mega-s01e03-what-it-shows/issues/2'
+  };
 </script>
 
-**Reassessment available:** [Separate causes, count once](/kb/incidents/4471-reassessment/).
-The summary below is the desk's original conclusion, retained for comparison. The computed
-views below contradict its “one issue” claim; see the reassessment before relying on it.
+The original “known, one issue, one fix queued” summary was wrong. The supplied tenant-based
+classifier separates the shared month-first parser from the booking-v3 hint mismatch.
+They have [separate course tickets](https://github.com/primu/mega-s01e03-what-it-shows/issues).
+This kb records an investigation of the 4 October export; it does not verify production fixes.
 
-Since April, people have told us their bookings land on the wrong day: a month flipped. By
-4 October the desk had **412 reports**.
+<CauseTable ticket={4471} {issues} />
 
-**Merged as one issue.** The parser reads dates month first, and our tenants write the day
-first. The fix is queued.
-
-<Callout>
-Known. One issue, one fix queued.
-</Callout>
-
-## What was merged
-
-<CauseTable ticket={4471} />
-
-## Since April
+See the [signed reassessment](/kb/incidents/4471-reassessment/) for the mechanisms, count
+method, timing anomalies and limitations. The exceptional timing reports remain in the
+classifier's parser count pending further evidence; no third mechanism has been established.
 
 <QueueTimeline ticket={4471} />
 
-## Lessons
+Received dates show when people reported failures. Merged dates show desk activity, including
+batch triage. Do not infer onset or a release regression from the merge spike.
 
-- A big ticket is mostly one bug reported many times. Merge early, count once.
-- Write the page while the queue is still in your head.
+Follow [current triage](/kb/triage/dedupe/) and [decision 0002](/kb/decisions/0002-dedupe-by-cause/)
+for new reports. Read before merging, keep IDs and event dates, and route uncertain cases to
+investigation. Refresh the counts from the next export. Production resolution requires
+separate verification of both paths.
+
+<RenderStamp {signature} />

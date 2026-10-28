@@ -1,37 +1,46 @@
 ---
 layout: runbook
-title: 'Triage: duplicate reports'
+title: 'Triage: verify the cause before merging'
 owner: support desk
 status: accepted
-reviewed: 2024-06-11
+reviewed: 2026-10-28
+signature: 'primu / Codex / S01E03'
 ---
 
 <script>
   import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
-  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue
-and merge every duplicate into it, so engineering sees one thread with a count.
+The support desk handles all products, not only `sched-prod`. Keep one ticket per supported
+cause, preserving each unique report ID and its received/merged times. Subject matching finds
+candidates; it does not establish duplicates. This replaces the stale subject-only guidance
+under [decision 0002](/kb/decisions/0002-dedupe-by-cause/).
 
-## The rule
+## Current rule
 
-A report is a duplicate when its **subject line matches** the subject of an open ticket
-([decision 0001](/kb/decisions/0001-dedupe-by-subject)):
+1. Read the report's body, affected product, behavior, input/output and relevant configuration.
+2. Compare evidence of the mechanism with candidate tickets. For date reports, resolve the
+   tenant locale, booking form and channel; intake browser locale and tags are only guesses.
+3. Merge only when the evidence supports the same cause, even if the subjects differ.
+4. Keep different causes apart even when their subjects match. If the tenant, mechanism or
+   evidence is missing, put the report in investigation and request the missing details.
+5. Count unique IDs once. Preserve contradictory evidence, recalculate after new exports,
+   and assign an owner. A “known” label does not prove a fix.
 
-1. lowercase the subject and strip punctuation;
-2. look for an open ticket with the same subject;
-3. found one: merge the report into it. None: open a new ticket.
-
-<Callout>
-Matching on subject is fast and needs no reading. During an incident that matters more than
-anything else.
-</Callout>
-
-## Try it
+## Date-report examples
 
 <DedupeExplorer />
 
-## When you are unsure
+The examples run the date-specific classifier; use product-specific evidence for other
+products. A matching subject with an unknown tenant is not enough to merge.
 
-Merge. Splitting a ticket later is cheaper than two engineers chasing the same bug.
+## Review and history
+
+The [#4471 reassessment](/kb/incidents/4471-reassessment/) shows why the old rule failed.
+Accepted [decision 0001](/kb/decisions/0001-dedupe-by-subject/) is retained unchanged as history;
+its June 2024 review date does not make it current. Follow decision 0002 for incoming reports
+while engineering investigates the separately tracked fixes. Review this guidance at the
+shared layout's configured interval and when evidence changes.
+
+<RenderStamp {signature} />

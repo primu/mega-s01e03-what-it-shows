@@ -42,5 +42,7 @@ for a total of 412 unique source reports.
 - `build/kb/incidents/4471-reassessment/index.html` and `evidence/4471-reassessment.png`
 - `evidence/report-assignments.json` lists the counted report IDs.
 
-Keep this open until this form path is verified fixed. Split and transfer reports once,
-preserving their IDs; do not close it just because the parent ticket is marked “known.”
+This is a course investigation ticket. The course accepted its cause and report count.
+Its closure records completed investigation and kb handoff, as the course requests;
+production remediation and verification remain separate engineering work. Split and
+transfer reports once, preserving IDs; a “known” parent status does not establish a fix.

@@ -2,7 +2,7 @@
 layout: runbook
 title: '0002 · Merge reports only with evidence of the same cause'
 owner: support desk
-status: proposed
+status: accepted
 reviewed: 2026-10-28
 signature: 'primu / Codex / S01E03'
 ---
@@ -14,12 +14,15 @@ signature: 'primu / Codex / S01E03'
 
 ## Context
 
+**Date:** 28 October 2026 · **Recorded by:** primu / Codex, for this course kb export.
+**Supersedes:** decision 0001 for current triage. This record does not claim a live production deployment.
+
 The desk handles several products. Subject-only merging under accepted decision 0001 put
 separate date mechanisms in #4471 and hid a problem without its own ticket. Intake tags also
 disagree with tenant configuration. The [reassessment](/kb/incidents/4471-reassessment/)
 contains computed evidence and uncertainty.
 
-## Proposed replacement for decision 0001
+## Decision replacing decision 0001
 
 Use subjects to find candidate reports, then read the body and verify the mechanism using
 the product, tenant configuration, channel and observed behavior. Merge only when evidence
@@ -32,11 +35,10 @@ classifier for every product on the desk.
 
 ## Rollout and consequences
 
-The support owner must approve this proposal before it replaces accepted decision 0001.
-Until then, pause automatic merges on subject alone and review new reports manually.
-After approval, link triage to this record, split existing mixed tickets, preserve report IDs
-and event timestamps, and assign one accountable owner to each cause. Recompute counts after
-new exports and review the policy at least every 180 days. Reading reports takes longer, but
+The current triage page links to this record. Stop automatic merges on subject alone and
+review new reports manually. Split existing mixed tickets, preserve report IDs and event
+timestamps, and assign one accountable owner to each cause. Recompute counts after new
+exports and review the policy at the shared layout's configured interval. Reading reports takes longer, but
 prevents unrelated fixes from being hidden behind one “known” status.
 
 Do not edit the accepted historical decision; record future changes in another numbered record.

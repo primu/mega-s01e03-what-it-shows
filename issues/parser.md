@@ -43,5 +43,7 @@ timestamps, timezone and rendered output. Do not assert a third confirmed cause 
 - `build/kb/incidents/4471-reassessment/index.html` and `evidence/4471-reassessment.png`
 - `evidence/report-assignments.json` lists every ID counted under each cause.
 
-Keep this ticket open until engineering verifies the fix and support checks the affected
-paths. New reports require rereading and refreshed counts; this export is a snapshot.
+This is a course investigation ticket. The course accepted its cause and report count.
+Its closure records completed investigation and kb handoff, as the course requests;
+production remediation and verification remain separate engineering work. New reports
+require rereading and refreshed counts; this export is a snapshot.
